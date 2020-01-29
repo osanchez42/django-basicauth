@@ -10,7 +10,7 @@ setup(
     version='0.5.2',
     author='Hiroki KIYOHARA',
     author_email='hirokiky@gmail.com',
-    url='https://github.com/hirokiky/django-basicauth/',
+    url='https://github.com/osanchez42/django-basicauth/',
     license='MIT',
     description="Basic auth utilities for Django.",
     long_description=README + '\n\n' + CHANGES,

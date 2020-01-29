@@ -44,8 +44,9 @@ def validate_request(request):
         # Not to use this env
         return True
 
+    # If authorization header is not present, allow forward as it may have been provided in URL
     if 'HTTP_AUTHORIZATION' not in request.META:
-        return False
+        return True
 
     authorization_header = request.META['HTTP_AUTHORIZATION']
     ret = extract_basicauth(authorization_header)
