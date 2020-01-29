@@ -23,7 +23,7 @@ Tested under...
 
 Installation
 ============
-NEEDS TO BE UPDATED, WILL NOT PROVIDE CHANGES 
+NEEDS TO BE UPDATED, WILL NOT PROVIDE CHANGES
 
 ::
 
@@ -94,3 +94,14 @@ Settings
 
 * ``BASICAUTH_REALM``: realm string, default is "Secure resource".
 * ``BASICAUTH_DISABLE``: Disable all of barriers by this library.
+
+Changes
+========
+django does not accept basic authentication headers to be passed in without
+using it to authenticate a user. If a user is authenticated, the authorization headers
+is added to the request META and the user object updated. if the user is not
+authenticated, the header is stripped and an anonymous user object is added.
+This middleware was created to provide an alternative method of authenticating users.
+Originally the middleware allowed incoming requests to be authenticated using a dictionary
+defined in settings.py. This has been removed, and all incoming requests that contain
+authorization headers will remain. May apply to other environments
