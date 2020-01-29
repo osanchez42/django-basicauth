@@ -91,6 +91,5 @@ use ``django.utils.decorators.method_decorator``.
 Settings
 ========
 
-* ``BASICAUTH_USERS`` (required): Dictionary including keys as username and values as passwords.
 * ``BASICAUTH_REALM``: realm string, default is "Secure resource".
 * ``BASICAUTH_DISABLE``: Disable all of barriers by this library.
